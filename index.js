@@ -7,7 +7,7 @@ app.get('/hello', (req, res) => {
     res.send('Hello Express JS');
 })
 
-// GET /user - default "Pritesh Patel"
+// GET /user - default "Adam Simcoe"
 app.get('/user', (req, res) => {
     const first_name = req.query.first_name || 'Adam';
     const last_name = req.query.last_name || 'Simcoe';
