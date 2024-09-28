@@ -9,15 +9,15 @@ app.get('/hello', (req, res) => {
 
 // GET /user - default "Adam Simcoe"
 app.get('/user', (req, res) => {
-    const first_name = req.query.first_name || 'Adam';
-    const last_name = req.query.last_name || 'Simcoe';
-    res.json({ first_name, last_name });
+    const firstname = req.query.firstname || 'Adam';
+    const lastname = req.query.lastname || 'Simcoe';
+    res.json({ firstname, lastname });
 })
 
 // POST /user
 app.post('/user/:firstname/:lastname', (req, res) => {
-    const { first_name, last_name } = req.params;
-    res.json({ first_name, last_name });
+    const { firstname, lastname } = req.params;
+    res.json({ firstname, lastname });
 }) 
 
 app.listen(port, () => {
